@@ -1,0 +1,1 @@
+"For Kernel Regression, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:",Whether kernel function is Gaussian versus triangular versus box-shaped,Whether we use Euclidian versus L1 versus L∞ metrics,The kernel width,The maximum height of the kernel function,C

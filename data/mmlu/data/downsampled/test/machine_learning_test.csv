@@ -1,0 +1,1 @@
+Statement 1| The log-likelihood of the data will always increase through successive iterations of the expectation maximation algorithm. Statement 2| One disadvantage of Q-learning is that it can only be used when the learner has prior knowledge of how its actions affect its environment.,"True, True","False, False","True, False","False, True",B

@@ -1,0 +1,13 @@
+
+{
+    "candidate_agents": 
+        ["PythonAssistant", "AlgorithmDeveloper", "ComputerScientist", "Programmer", "Passer", "Tester", "Reflector"],
+    "candidate_controllers":
+        ["construct-role", "pre-rank", "rank", "structure"],
+    "type_to_agents": {
+        "Coder": ["PythonAssistant", "AlgorithmDeveloper", "ComputerScientist", "Programmer"],
+        "Verifier": ["Reflector", "Tester", "Passer", "Ranker"]
+    },
+    "layer_type_list": ["Coder", "Verifier", "Coder", "Verifier", "Coder"],
+    "layer_max_agents": [4, 4, 4, 4, 4]
+}

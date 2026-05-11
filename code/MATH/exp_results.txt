@@ -1,0 +1,167 @@
+System  roles: ['Origin', 'Origin', 'Origin', 'System']    loop_num: 100  span_range: [0, int(loops/10)] + [int(loops/10), int(loops/10)*2]  iter=1
+sorted_id2score [(2, 0.375), (1, 0.37), (3, 0.365), (0, 0.345)]
+Ours: 0.335
+
+System  roles: ['Origin', 'Origin', 'Origin', 'System']    loop_num: 100  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.334    Ours: 0.34
+
+--------------------------------------------------------------------------------------------------------------------
+
+Examples  roles: ['Origin', 'Origin', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.307    Ours: 0.357
+
+Examples  roles: ['Origin', 'Origin', 'Origin', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.328    Ours: 0.322
+
+Examples  roles: ['Origin', 'Origin', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.314    Ours: 0.336
+
+System  roles: ['Origin', 'Origin', 'Origin', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.307    Ours: 0.343
+
+rank  roles: ['Origin', 'Origin', 'Origin', 'Origin']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.357    Ours: 0.321
+
+System  roles: ['Origin', 'Origin', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+System  roles: ['Origin', 'Origin', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+System  roles: ['Origin', 'Origin', 'Origin', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.321    Ours: 0.35
+
+System  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.307    Ours: 0.379
+
+Examples  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+DyLAN: 0.35    Ours: 0.336
+
+Examples  roles: ['Origin', 'Origin', 'Origin', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.307
+
+rank  roles: ['Origin', 'Origin', 'Origin', 'Origin']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.329
+
+System  roles: ['Origin', 'Origin', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.307
+
+Examples  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.329
+
+rank  roles: ['Origin', 'Origin', 'Origin', 'Origin']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.329
+
+System  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.357
+
+Examples  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.343
+
+rank  roles: ['Origin', 'Origin', 'Origin', 'Origin']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+Examples  roles: ['Origin', 'Origin', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3
+
+Examples  roles: ['Origin', 'Origin', 'Origin', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+['Examples', 'rank']  roles: ['Examples', 'Examples', 'Examples', 'Examples'], ['Examples', 'Examples', 'Examples', 'Examples']   loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.321     Ours: 0.329
+
+['Examples', 'rank']  roles: ['Examples', 'Examples', 'Examples', 'Examples'], ['Examples', 'Examples', 'Examples', 'Examples']   loop_num: 20  span_range: [0, 1] + [1, 2]  iter=2
+Ours: 0.3  0.321  0.314  0.321
+
+['Examples', 'rank']  roles: ['Examples', 'Examples', 'Examples', 'Examples'], ['Examples', 'Examples', 'Examples', 'Examples']   loop_num: 20  span_range: [0, 1] + [1, 2]  iter=2
+Ours: 0.343  0.321  0.286  0.279
+
+['System', 'rank']  roles: ['System', 'System', 'System', 'System'], ['System', 'System', 'System', 'System']   loop_num: 20  span_range: [0, 1] + [1, 2]  iter=2
+Ours: 0.364  0.343  0.3  0.279
+
+----------------------------------------------------
+
+new code archietcture
+
+construct  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.329
+
+['rank', 'Examples']  roles: ['Examples', 'Examples', 'Examples', 'Examples'], ['Examples', 'Examples', 'Examples', 'Examples']   loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.293  0.3
+
+construct  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.343
+
+rank  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.357
+
+construct  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.336
+
+System  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+pre-rank  roles: ['System', 'System', 'System', 'System']    loop_num: 20  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3
+
+
+----------------------------------------------------
+
+decrease the traing/test data: loop_num 10
+
+$ 80 -> 84.1$
+
+pre-rank  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+pre-rank  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.336
+
+structure  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.328
+
+structure  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.357
+
+pre-rank  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.343
+
+structure  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+Examples  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3857
+
+Examples  roles: ['Examples', 'Examples', 'Examples', 'Examples']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.4143
+
+System  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.314
+
+System  roles: ['System', 'System', 'System', 'System']    loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3857
+
+
+['System', 'Examples']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3857, 0.3286, 0.3571, 0.4286
+
+['System', 'Examples']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3286, 0.4143, 0.4714, 0.5143
+
+
+
+['structure', 'System']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3, 0.3571
+
+['structure', 'System']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3714, 0.4, 0.4286, 0.3857
+
+
+
+
+['System', 'structure']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3857, 0.3428, 0.4, 0.3714
+
+['System', 'structure']   loop_num: 10  span_range: [0, 1] + [1, 2]  iter=1
+Ours: 0.3571, 0.3571, 0.4286, 0.3857
+

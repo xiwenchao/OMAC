@@ -1,0 +1,38 @@
+{
+    "candidate_agents": [
+        "Economist",
+        "Doctor",
+        "Lawyer",
+        "Mathematician",
+        "Psychologist",
+        "Programmer",
+        "Historian"
+    ],
+    "candidate_controllers": [
+        "construct-role",
+        "pre-rank",
+        "rank",
+        "structure"
+    ],
+    "type_to_agents": {
+        "Reasoner": [
+            "Economist",
+            "Doctor",
+            "Lawyer",
+            "Mathematician",
+            "Psychologist",
+            "Programmer",
+            "Historian"
+        ]
+    },
+    "layer_type_list": [
+        "Reasoner",
+        "Reasoner",
+        "Reasoner"
+    ],
+    "layer_max_agents": [
+        7,
+        7,
+        7
+    ]
+}

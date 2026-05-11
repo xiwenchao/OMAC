@@ -1,0 +1,34 @@
+{
+    "candidate_agents": [
+        "System",
+        "Examples",
+        "Examples_cot"
+    ],
+    "candidate_controllers": [
+        "construct-role",
+        "pre-rank",
+        "rank",
+        "structure"
+    ],
+    "type_to_agents": {
+        "Solver": [
+            "System"
+        ]
+    },
+    "base_roles": [
+        "System",
+        "System",
+        "System",
+        "System"
+    ],
+    "layer_type_list": [
+        "Solver",
+        "Solver",
+        "Solver"
+    ],
+    "layer_max_agents": [
+        4,
+        4,
+        2
+    ]
+}
