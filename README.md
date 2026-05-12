@@ -129,3 +129,16 @@ The order in `--optimization_points` matters. For example, `ComputerScientist_ra
 ## Acknowledgments
 
 This project incorporates code from the [DyLAN package](https://github.com/SALT-NLP/DyLAN), originally licensed under the MIT License. Significant modifications have been made to adapt it to OMAC's goals and architecture.
+
+## Reference
+
+Please cite our paper if you use our codes kindly.
+```
+@article{li2025omac,
+  title={OMAC: A Holistic Optimization Framework for LLM-Based Multi-Agent Collaboration},
+  author={Li, Shijun and Hasson, Hilaf and Ghosh, Joydeep},
+  booktitle={ICML},
+  year={2026},
+  organization={PMLR}
+}
+```
