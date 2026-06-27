@@ -1,4 +1,13 @@
-# OMAC: Optimization for Multi-Agent Collaboration
+# OMAC: A Holistic Optimization Framework for LLM-Based Multi-Agent Collaboration
+
+[![arXiv](https://img.shields.io/badge/arXiv-2505.11765-b31b1b.svg?labelColor=555)](https://arxiv.org/pdf/2505.11765)
+[![ICML 2026](https://img.shields.io/badge/ICML-2026-4b43d1.svg?labelColor=555)](https://icml.cc/virtual/2026/oral/71174)
+
+This repository provides the official implementation of OMAC, accepted as an ICML 2026 Oral.
+
+OMAC addresses a core challenge in LLM-based multi-agent collaboration: the design of agents and collaboration structures is often handcrafted, task-specific, and difficult to optimize systematically. OMAC formulates multi-agent collaboration around five optimization dimensions covering both agent functionality and collaboration structure. For any single dimension, OMAC proposes an optimization algorithm that uses a Semantic Initializer to generate candidate agents or controllers, evaluates them through collaboration, and uses a Contrastive Comparator to compare high- and low-performing candidates and refine stronger ones. OMAC also proposes a multi-dimension optimization algorithm that iteratively optimizes multiple selected dimensions while carrying previously optimized agents/controllers into later optimization rounds.
+
+Paper links: [arXiv](https://arxiv.org/pdf/2505.11765) | [ICML 2026 oral](https://icml.cc/virtual/2026/oral/71174)
 
 ## Overview
 
@@ -10,7 +19,16 @@ This repository provides OMAC experiments for three benchmarks: MMLU, HumanEval,
 4. **Str-2**: Use an LLM controller to select participating agents during a collaboration step.
 5. **Str-3**: Use an LLM controller to decide how agents communicate with each other in each step.
 
-The HumanEval implementation follows the POMA-style parameter assignment and collaboration-control design while retaining the original OMAC Str-3 structure controller. The same configuration pattern is applied to MMLU and MATH.
+<p align="center">
+  <img src="figs/single_opt_case.png" width="72%" alt="OMAC single-dimension optimization case study">
+</p>
+
+<p align="center">
+  <em>A HumanEval-style example of single-dimension optimization for the Programmer agent.</em>
+</p>
+
+In this example, the Semantic Initializer proposes multiple Programmer prompts, each prompt is evaluated inside the multi-agent collaboration process, and the Contrastive Comparator compares positive and negative candidates to identify useful prompt factors. The refined prompt is then fed back into the optimization loop for the next iteration.
+
 
 ## Structure
 
@@ -132,9 +150,9 @@ This project incorporates code from the [DyLAN package](https://github.com/SALT-
 
 ## Reference
 
-Please cite our paper if you use our codes kindly.
+Please cite our paper if you use this code.
 ```
-@article{li2025omac,
+@inproceedings{li2025omac,
   title={OMAC: A Holistic Optimization Framework for LLM-Based Multi-Agent Collaboration},
   author={Li, Shijun and Hasson, Hilaf and Ghosh, Joydeep},
   booktitle={ICML},
