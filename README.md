@@ -7,28 +7,26 @@ This repository provides the official implementation of OMAC, accepted as an ICM
 
 OMAC addresses a core challenge in LLM-based multi-agent collaboration: the design of agents and collaboration structures is often handcrafted, task-specific, and difficult to optimize systematically. OMAC formulates multi-agent collaboration around five optimization dimensions covering both agent functionality and collaboration structure. For any single dimension, OMAC proposes an optimization algorithm that uses a Semantic Initializer to generate candidate agents or controllers, evaluates them through collaboration, and uses a Contrastive Comparator to compare high- and low-performing candidates and refine stronger ones. OMAC also proposes a multi-dimension optimization algorithm that iteratively optimizes multiple selected dimensions while carrying previously optimized agents/controllers into later optimization rounds.
 
-Paper links: [arXiv](https://arxiv.org/pdf/2505.11765) | [ICML 2026 oral](https://icml.cc/virtual/2026/oral/71174)
+Paper links: [arXiv](https://arxiv.org/pdf/2505.11765) | [ICML 2026 Oral](https://icml.cc/virtual/2026/oral/71174)
 
 ## Overview
 
-This repository provides OMAC experiments for three benchmarks: MMLU, HumanEval, and MATH. OMAC defines five optimization points for LLM-based multi-agent collaboration:
+This repository provides OMAC experiments for three benchmarks: MMLU, HumanEval, and MATH. OMAC defines five optimization dimensions for LLM-based multi-agent collaboration:
 
 1. **Fun-1**: Optimize existing candidate agents, such as instruction prompts and context examples.
-2. **Fun-2**: Optimize an LLM to construct new agents for collaboration.
-3. **Str-1**: Use an LLM controller to choose candidate agents before collaboration.
-4. **Str-2**: Use an LLM controller to select participating agents during a collaboration step.
-5. **Str-3**: Use an LLM controller to decide how agents communicate with each other in each step.
+2. **Fun-2**: Optimize the construction of new agents for collaboration.
+3. **Str-1**: Optimize an LLM controller to select candidate agents for global collaboration.
+4. **Str-2**: Optimize an LLM controller to select participating agents during a collaboration step.
+5. **Str-3**: Optimize an LLM controller to decide how agents communicate with each other in each step.
+
 
 <p align="center">
   <img src="figs/single_opt_case.png" width="72%" alt="OMAC single-dimension optimization case study">
 </p>
 
-<p align="center">
-  <em>A HumanEval-style example of single-dimension optimization for the Programmer agent.</em>
-</p>
 
-In this example, the Semantic Initializer proposes multiple Programmer prompts, each prompt is evaluated inside the multi-agent collaboration process, and the Contrastive Comparator compares positive and negative candidates to identify useful prompt factors. The refined prompt is then fed back into the optimization loop for the next iteration.
 
+In the above example, the Semantic Initializer proposes multiple Programmer prompts, each prompt is evaluated inside the multi-agent collaboration process, and the Contrastive Comparator compares positive and negative candidates to identify useful prompt factors. The refined prompt is then fed back into the optimization loop for the next iteration.
 
 ## Structure
 
@@ -142,7 +140,7 @@ In that configuration, the first layer generates code, the second layer evaluate
 - **MATH Fun-1**: `System`, `Examples`
 - **Shared controllers**: `construct-role`, `pre-rank`, `rank`, `structure`
 
-The order in `--optimization_points` matters. For example, `ComputerScientist_rank_structure` first optimizes `ComputerScientist`, then optimizes the rank controller with that prompt retained, then optimizes the communication-structure controller with both prior optimizations retained.
+The order in `--optimization_points` defines the optimization sequence. For example, `ComputerScientist_rank_structure` first optimizes `ComputerScientist`, then optimizes the rank controller with that prompt retained, then optimizes the communication-structure controller with both prior optimizations retained.
 
 ## Acknowledgments
 
